@@ -1,0 +1,196 @@
+:root {
+    --primary-color: #b66b4b;
+    --primary-dark: #854a36;
+    --background-color: #ffffff;
+    --surface-color: #ffffff;
+    --text-color: #3c342f;
+    --muted-color: #756960;
+    --border-color: #e8ddd4;
+    --font-family: Georgia, "Times New Roman", serif;
+    --heading-font-family: Georgia, "Times New Roman", serif;
+    font-family: var(--font-family);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+strong,
+b {
+    font-weight: 400;
+}
+
+section.confirmation {
+    width: min(620px, 100%);
+    margin: 0 auto;
+    padding: clamp(1.25rem, 5vw, 2.5rem);
+    border: 1px solid var(--border-color);
+    border-radius: 1.15rem 2.5rem 1.15rem 2.5rem;
+    background: var(--surface-color);
+    box-shadow: 0 8px 28px rgb(38 57 67 / 10%);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--primary-dark);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+section.confirmation h1 {
+    margin: 0 0 0.5rem;
+    color: var(--primary-dark);
+    font-size: clamp(1.7rem, 5vw, 2.25rem);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.intro {
+    margin: 0 auto 1.5rem;
+    color: var(--muted-color);
+    text-align: center;
+}
+
+.whatsapp-link {
+    display: flex;
+    min-height: 2.9rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin: 0 0 1.25rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.55rem;
+    background: #168c54;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 160ms ease;
+}
+
+.whatsapp-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.whatsapp-link:hover {
+    background: #116b40;
+    color: #ffffff;
+}
+
+form#confirmationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+form label {
+    margin-top: 0.4rem;
+    font-weight: 400;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid #b6ddd8;
+    border-radius: 0.55rem;
+    background: var(--surface-color);
+    color: var(--text-color);
+    font: inherit;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary-color);
+    outline: 3px solid rgb(45 151 170 / 22%);
+}
+
+form button[type="submit"] {
+    min-height: 2.9rem;
+    margin-top: 0.65rem;
+    padding: 0.75rem 1rem;
+    border: 0;
+    border-radius: 0.55rem;
+    background: #c5f4f6;
+    color: #173f5f;
+    border: 1px solid #75cdd3;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 400;
+}
+
+form button[type="submit"]:hover:not(:disabled) {
+    background: #a6e7ed;
+    color: #173f5f;
+}
+
+form button[type="submit"]:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+#confirmationMessage {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.55rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#confirmationMessage.success {
+    display: block;
+    border: 1px solid #a8d9b2;
+    background: #edf8ef;
+    color: #245c30;
+}
+
+#confirmationMessage.error {
+    display: block;
+    border: 1px solid #e7b6b6;
+    background: #fff0f0;
+    color: #812d2d;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f2b84b;
+    outline-offset: 3px;
+}

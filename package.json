@@ -1,0 +1,13 @@
+{
+  "name": "sonho-de-crianca-arts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Loja virtual da Sonho de Criança Art's com cadastro de clientes e histórico de pedidos.",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/server.test.js"
+  }
+}

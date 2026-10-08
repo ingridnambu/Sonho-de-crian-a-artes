@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonho de Criança Art's</title>
+  <meta name="description" content="Canecas, lembrancinhas e papelaria personalizada feitas com carinho pela Sonho de Criança Art's. Confira o catálogo e peça pelo WhatsApp." />
+  <meta name="theme-color" content="#1689a8" />
+  <link rel="icon" type="image/png" href="./img/logo.png" />
+  <script src="./theme.js?v=6"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link rel="stylesheet" href="./style.css?v=22">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><span class="brand-full">Sonho de Criança Art's</span><span class="brand-compact">Sonho de<br>Criança Art's</span></h1>
+      <nav role="navigation" aria-label="Menu principal">
+        <a href="#home" tabindex="0">Início</a>
+        <a href="#gallery" tabindex="0">Galeria</a>
+        <a href="#about-title" tabindex="0">Sobre</a>
+        <a href="#contact" tabindex="0">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path></svg></button>
+        <a class="account-link" href="./conta.html">Entrar</a>
+        <button id="openCart" type="button" title="Abrir carrinho" aria-label="Abrir carrinho" aria-controls="cartPanel" aria-expanded="false"><svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.75 3.5h2.1l2.1 10.25a2 2 0 0 0 1.96 1.6h8.45a2 2 0 0 0 1.92-1.48L21.5 8H6"></path><path d="M8 10.5h11.7M8.65 13.3h10.25"></path><circle cx="9.4" cy="19.25" r="1.25"></circle><circle cx="18.15" cy="19.25" r="1.25"></circle></svg><span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <div class="home-showcase">
+      <section class="home-welcome" aria-labelledby="welcomeTitle">
+        <div class="welcome-copy">
+          <span class="welcome-eyebrow">Um ateliê feito de carinho</span>
+          <h2 id="welcomeTitle">Pequenos detalhes, grandes momentos.</h2>
+          <p>Criamos presentes e personalizados com o cuidado de quem prepara algo especial para a própria casa.</p>
+          <a class="welcome-link" href="#gallery">Conheça nossas criações <span aria-hidden="true">→</span></a>
+        </div>
+        <span class="welcome-stamp" aria-hidden="true">
+          <svg viewBox="0 0 80 80"><path d="M40 9c4 10 7 13 17 17-10 4-13 7-17 17-4-10-7-13-17-17 10-4 13-7 17-17Z"></path><path d="M62 48c2 6 4 8 10 10-6 2-8 4-10 10-2-6-4-8-10-10 6-2 8-4 10-10Z"></path><path d="M20 48c2 6 4 8 10 10-6 2-8 4-10 10-2-6-4-8-10-10 6-2 8-4 10-10Z"></path></svg>
+        </span>
+      </section>
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/caneca1.jpeg" class="d-block w-100" alt="Caneca personalizada com alça branca" fetchpriority="high">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/caixa4.jpeg" class="d-block w-100" alt="Caixinha personalizada para lembrança" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/caneca4.jpeg" class="d-block w-100" alt="Caneca personalizada com alça colorida" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/copo2.jpeg" class="d-block w-100" alt="Copo long drink personalizado" loading="lazy">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/topo de bolo1.jpeg" class="d-block w-100" alt="Topo de bolo personalizado" loading="lazy">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+
+    <section id="galeria">
+      <h2>Nossos Produtos</h2>
+
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-category="todos" aria-pressed="true">Todos</button>
+        <button class="filter-btn" data-category="canecas e copos" aria-pressed="false">Canecas e Copos</button>
+        <button class="filter-btn" data-category="lembrancinhas" aria-pressed="false">Lembrancinhas</button>
+        <button class="filter-btn" data-category="papelaria" aria-pressed="false">Papelaria</button>
+      </div>
+
+      <div class="gallery-search">
+        <label for="productSearch">Buscar produtos</label>
+        <input id="productSearch" type="search" placeholder="Ex.: caneca, chaveiro..." autocomplete="off">
+        <p id="searchResults" class="search-results" role="status" aria-live="polite" hidden></p>
+      </div>
+
+      <div class="gallery-grid" id="gallery">
+        <!-- Produto 1 -->
+        <div class="gallery-item" data-category="canecas e copos">
+          <img src="./img/caneca1.jpeg" alt="Caneca personalizada com alça branca" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Caneca alça branca</h4>
+            <button onclick="addToCart('Caneca alça branca')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="gallery-item" data-category="lembrancinhas">
+          <img src="./img/cartao de visita 2.jpeg" alt="Placa de mesa personalizada" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Placa de mesa</h4>
+            <button onclick="addToCart('Placa de mesa')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="gallery-item" data-category="papelaria">
+          <img src="./img/caixa4.jpeg" alt="Caixinha personalizada para lembrança" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Caixinha</h4>
+            <button onclick="addToCart('Caixinha')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="gallery-item" data-category="canecas e copos">
+          <img src="./img/caneca4.jpeg" alt="Caneca personalizada com alça colorida" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Caneca alça colorida</h4>
+            <button onclick="addToCart('Caneca alça colorida')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="gallery-item" data-category="canecas e copos">
+          <img src="./img/caneca10.jpeg" alt="Caneca acrílica personalizada" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Caneca acrílica</h4>
+            <button onclick="addToCart('Caneca acrílica')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 6 -->
+        <div class="gallery-item" data-category="canecas e copos">
+          <img src="./img/copo1.jpeg" alt="Copo americano acrílico personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Copo americano acrílico</h4>
+            <button onclick="addToCart('Copo americano acrílico')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 7 -->
+        <div class="gallery-item" data-category="canecas e copos">
+          <img src="./img/copo2.jpeg" alt="Copo long drink personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Copo long drink</h4>
+            <button onclick="addToCart('Copo long drink')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 8 -->
+        <div class="gallery-item" data-category="papelaria">
+          <img src="./img/balde ded pipoca.jpeg" alt="Balde de pipoca personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Balde de pipoca</h4>
+            <button onclick="addToCart('Balde de pipoca')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 9 -->
+        <div class="gallery-item" data-category="canecas e copos">
+          <img src="./img/2021-09-27.webp" alt="Taça personalizada" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Taça</h4>
+            <button onclick="addToCart('Taça')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 10 -->
+        <div class="gallery-item" data-category="canecas e copos">
+          <img src="./img/caneca de chop1.jpeg" alt="Caneca de chopp personalizada" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Caneca de chopp</h4>
+            <button onclick="addToCart('Caneca de chopp')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 11 -->
+        <div class="gallery-item" data-category="lembrancinhas">
+          <img src="./img/azulejo1.jpeg" alt="Azulejo personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Azulejo</h4>
+            <button onclick="addToCart('Azulejo')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 12 -->
+        <div class="gallery-item" data-category="lembrancinhas">
+          <img src="./img/chaveiro.jpeg" alt="Chaveiro personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Chaveiro</h4>
+            <button onclick="addToCart('Chaveiro')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 13 -->
+        <div class="gallery-item" data-category="lembrancinhas">
+          <img src="./img/almofada.jpeg" alt="Almofada personalizada" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Almofada</h4>
+            <button onclick="addToCart('Almofada')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 14 -->
+        <div class="gallery-item" data-category="papelaria">
+          <img src="./img/centro de mesa1.jpeg" alt="Display de mesa personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Display</h4>
+            <button onclick="addToCart('Display')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 15 -->
+        <div class="gallery-item" data-category="papelaria">
+          <img src="./img/forma de brigadeiro1.jpeg" alt="Forma de brigadeiro personalizada" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Forma de brigadeiro</h4>
+            <button onclick="addToCart('Forma de brigadeiro')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 16 -->
+        <div class="gallery-item" data-category="papelaria">
+          <img src="./img/cartao de visita.jpeg" alt="Card de agradecimento personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Card</h4>
+            <button onclick="addToCart('Card')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 17 -->
+        <div class="gallery-item" data-category="papelaria">
+          <img src="./img/WhatsApp Image 2025-06-03 at 2.41.51 PM (1).jpeg" alt="Kit chaveiro e card personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Chaveiro e Card</h4>
+            <button onclick="addToCart('Chaveiro e Card')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 18 -->
+        <div class="gallery-item" data-category="papelaria">
+          <img src="./img/topo de bolo1.jpeg" alt="Topo de bolo personalizado" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Topo de bolo</h4>
+            <button onclick="addToCart('Topo de bolo')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+
+        <!-- Produto 19 -->
+        <div class="gallery-item" data-category="lembrancinhas">
+          <img src="./img/2021-03-14.webp" alt="Sabonete aromatizado artesanal" loading="lazy" decoding="async">
+          <div class="desc">
+            <h4>Sabonete aromatizado</h4>
+            <button onclick="addToCart('Sabonete aromatizado')">Adicionar ao carrinho</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Painel do carrinho -->
+    <div id="cartPanel" class="cart-panel" style="display: none;">
+      <h2>Carrinho de Compras</h2>
+      <ul id="cartItems"></ul>
+      <p><strong>Total:</strong> <span id="cartTotal">R$ 0,00</span></p>
+      <button onclick="checkout()">Finalizar pelo WhatsApp</button>
+    </div>
+
+    <section id="about-section">
+      <div class="about-heading">
+        <span class="about-eyebrow">Nossa história</span>
+        <h2 id="about-title">Criamos com carinho, personalizamos com significado</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-story">
+          <p class="about-lead">A Sonho de Criança Art's nasceu da vontade de transformar ideias e momentos especiais em lembranças feitas para durar.</p>
+          <p>O encanto pelo universo dos personalizados começou trabalhando em um buffet: cada detalhe preparado com cuidado e cada sorriso ao receber uma peça única despertaram uma paixão por criar. Em 2018, com coragem, dedicação e os primeiros investimentos em maquinário, começamos a produzir canecas e copos personalizados.</p>
+          <p>Quando a pandemia mudou a rotina de tantas famílias, também encontramos um novo caminho para continuar criando. A papelaria personalizada chegou ao nosso ateliê e trouxe convites, caixas temáticas, lembrancinhas e topos de bolo para o nosso catálogo.</p>
+          <p>Hoje somos uma empresa familiar, guiada pela criatividade e pelo carinho em cada encomenda. Nosso propósito continua o mesmo: cuidar dos detalhes e ajudar cada cliente a celebrar sua história de um jeito especial.</p>
+        </div>
+        <aside class="about-highlights" aria-label="Sobre a Sonho de Criança Art's">
+          <img class="about-logo" src="./img/logo.png" width="150" height="184" alt="Logo da Sonho de Criança Art's">
+          <div class="about-highlight">
+            <span class="about-highlight-mark" aria-hidden="true">01</span>
+            <div>
+              <h3>Uma história de coragem</h3>
+              <p>Desde 2018, transformando sonhos em projetos feitos à mão e com dedicação.</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <span class="about-highlight-mark" aria-hidden="true">02</span>
+            <div>
+              <h3>Criatividade que se reinventa</h3>
+              <p>De canecas e copos à papelaria personalizada: ideias para diferentes momentos.</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <span class="about-highlight-mark" aria-hidden="true">03</span>
+            <div>
+              <h3>Carinho em cada detalhe</h3>
+              <p>Uma empresa familiar que coloca cuidado e significado em cada encomenda.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Vamos conversar?</h2>
+      <p>Tem uma dúvida ou quer fazer um pedido personalizado? Envie sua mensagem e responderemos assim que possível.</p>
+      <a class="contact-cta" href="./contato.html">Fale com a gente</a>
+      <a class="contact-cta whatsapp-cta" href="https://wa.me/5511946202785?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos." target="_blank" rel="noopener noreferrer"><svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20l1-4.7a8.5 8.5 0 1 1 16.5-3.6Z"></path><path d="M8.5 8.5c.3-.5.6-.5.9-.5h.4c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.2 1.5 2.1 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .3-.2 1.1-.7 1.5-.5.4-1.1.6-1.8.5-1-.1-2.3-.7-3.5-1.8-1.3-1.1-2.1-2.5-2.3-3.5-.2-1 .1-1.8.4-2.2Z"></path></svg>Conversar pelo WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Sonho de Criança Art's. Todos os direitos reservados.
+    <a href="https://www.instagram.com/sonhodecriancaarts/" aria-label="Instagram da Sonho de Criança Art's"><img src="./img/instagram5.png" width="48" height="48" alt="" loading="lazy"></a>
+    <a href="https://www.facebook.com/share/1FeoWLWRaN/" aria-label="Facebook da Sonho de Criança Art's"><img src="./img/download.png" width="48" height="48" alt="" loading="lazy"></a>
+  </footer>
+  <script src="./script.js?v=5" defer></script>
+  
+</body>
+</html>

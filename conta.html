@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Acesse sua conta da Sonho de Criança Art's e acompanhe seus pedidos personalizados.">
+  <meta name="theme-color" content="#1689a8">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+  <script src="./theme.js?v=6"></script>
+  <title>Minha conta | Sonho de Criança Art's</title>
+  <link rel="stylesheet" href="./style.css?v=22">
+  <link rel="stylesheet" href="./conta.css?v=11">
+  <script src="./conta.js?v=6" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="account-brand" href="./index.html">Sonho de Criança Art's</a>
+      <div class="header-actions">
+        <a class="account-link" href="./index.html">Voltar à loja</a>
+        <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="account-main">
+    <section class="account-card" aria-labelledby="accountTitle">
+      <div class="account-heading">
+        <span class="account-eyebrow">Área do cliente</span>
+        <h1 id="accountTitle">Entre na sua conta</h1>
+        <p id="accountDescription">Acesse sua conta para registrar pedidos e consultar seu histórico.</p>
+      </div>
+
+      <div id="accountMessage" class="account-message" role="status" aria-live="polite" hidden></div>
+
+      <div id="authView">
+        <form id="loginPanel" class="auth-form">
+          <label for="loginEmail">E-mail</label>
+          <input id="loginEmail" name="email" type="email" autocomplete="email" required maxlength="254">
+
+          <label for="loginPassword">Senha</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" required maxlength="128">
+
+          <button class="account-submit" type="submit">Entrar</button>
+          <p class="auth-switch" id="registerPrompt">Ainda não tem uma conta? <button id="showRegister" type="button">Criar uma conta</button></p>
+        </form>
+
+        <form id="registerPanel" class="auth-form" hidden>
+          <label for="registerName">Nome completo</label>
+          <input id="registerName" name="name" type="text" autocomplete="name" required minlength="2" maxlength="100">
+
+          <label for="registerEmail">E-mail</label>
+          <input id="registerEmail" name="email" type="email" autocomplete="email" required maxlength="254">
+
+          <label for="registerPhone">Telefone / WhatsApp</label>
+          <input id="registerPhone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" placeholder="11999991234" pattern="[0-9]{10,11}" required aria-describedby="phoneHint">
+          <p id="phoneHint" class="field-hint">Digite o DDD e o telefone, usando 10 ou 11 números.</p>
+
+          <label for="registerPassword">Crie uma senha</label>
+          <input id="registerPassword" name="password" type="password" autocomplete="new-password" required minlength="4" maxlength="128" aria-describedby="passwordHint">
+          <p id="passwordHint" class="field-hint">Use pelo menos 4 caracteres. Pode usar letras, números ou símbolos.</p>
+
+          <button class="account-submit" type="submit">Criar conta</button>
+          <p class="auth-switch" id="loginPrompt">Já tem uma conta? <button id="showLogin" type="button">Entrar</button></p>
+        </form>
+      </div>
+
+      <section id="customerView" class="customer-view" aria-labelledby="customerGreeting" hidden>
+        <div class="customer-toolbar">
+          <div>
+            <span class="account-eyebrow">Sua conta</span>
+            <h2 id="customerGreeting"></h2>
+            <p>Bem-vinda à sua área de cliente.</p>
+          </div>
+          <button id="logoutButton" class="logout-button" type="button">Sair</button>
+        </div>
+
+        <section class="dashboard-section profile-section" aria-labelledby="profileTitle">
+          <div class="dashboard-section-heading">
+            <div>
+              <span class="account-eyebrow">Seus dados</span>
+              <h2 id="profileTitle">Meu cadastro</h2>
+            </div>
+          </div>
+          <dl class="profile-details">
+            <div>
+              <dt>Nome</dt>
+              <dd id="customerName"></dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd id="customerEmail"></dd>
+            </div>
+            <div>
+              <dt>Telefone / WhatsApp</dt>
+              <dd id="customerPhone"></dd>
+            </div>
+          </dl>
+        </section>
+
+        <div id="pendingCheckout" class="pending-checkout" hidden>
+          <h3>Seu carrinho está pronto</h3>
+          <p>Registre o pedido na sua conta e continue a conversa pelo WhatsApp.</p>
+          <button id="checkoutButton" class="account-submit" type="button">Registrar pedido</button>
+        </div>
+
+        <div id="whatsAppNextStep" class="whatsapp-next-step" hidden>
+          <p>Pedido registrado! Para combinar os detalhes, continue pelo WhatsApp.</p>
+          <a id="whatsAppOrderLink" class="account-submit" href="#" target="_blank" rel="noopener noreferrer">Continuar pelo WhatsApp</a>
+        </div>
+
+        <section class="dashboard-section" aria-labelledby="accountCartTitle">
+          <div class="dashboard-section-heading">
+            <div>
+              <span class="account-eyebrow">Continue suas compras</span>
+              <h2 id="accountCartTitle">Meu carrinho</h2>
+            </div>
+            <a class="back-to-store" href="./index.html#gallery">Adicionar produtos</a>
+          </div>
+          <div id="accountCartList" class="account-cart-list"></div>
+          <div class="account-cart-footer">
+            <p><strong>Total:</strong> <span id="accountCartTotal">R$ 0,00</span></p>
+            <button id="accountCheckout" class="account-submit" type="button" disabled>Finalizar pedido</button>
+          </div>
+        </section>
+
+        <section class="dashboard-section" aria-labelledby="favoritesTitle">
+          <div class="dashboard-section-heading">
+            <div>
+              <span class="account-eyebrow">Produtos que você gostou</span>
+              <h2 id="favoritesTitle">Meus favoritos</h2>
+            </div>
+            <a class="back-to-store" href="./index.html#gallery">Explorar produtos</a>
+          </div>
+          <div id="favoritesList" class="favorites-list"></div>
+        </section>
+
+        <div class="orders-heading">
+          <div>
+            <span class="account-eyebrow">Acompanhe por aqui</span>
+            <h2>Meus pedidos</h2>
+          </div>
+          <a class="back-to-store" href="./index.html#gallery">Ver produtos</a>
+        </div>
+        <div id="ordersList" class="orders-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Sonho de Criança Art's. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
